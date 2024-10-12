@@ -1,0 +1,19 @@
+<%- include('layout') %>
+
+<h2>Edit Tree</h2>
+<form action="/trees/edit/<%= tree._id %>" method="POST">
+    <div class="form-group">
+        <label for="treeName">Tree Name:</label>
+        <input type="text" id="treeName" name="treeName" value="<%= tree.treeName %>" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= tree.description %></textarea>
+    </div>
+    <div class="form-group">
+        <label for="imagePath">Image Path:</label>
+        <input type="text" id="imagePath" name="imagePath" value="<%= tree.imagePath %>" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+    <a href="/" class="btn btn-secondary">Cancel</a>
+</form>

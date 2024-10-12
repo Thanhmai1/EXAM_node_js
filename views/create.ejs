@@ -1,0 +1,19 @@
+<%- include('layout') %>
+
+<h2>Add a new tree</h2>
+<form action="/trees/create" method="POST">
+    <div class="form-group">
+        <label for="treeName">Tree Name:</label>
+        <input type="text" id="treeName" name="treeName" required>
+    </div>
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+    </div>
+    <div class="form-group">
+        <label for="imagePath">Image Path:</label>
+        <input type="text" id="imagePath" name="imagePath" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+    <button type="reset" class="btn btn-secondary">Reset</button>
+</form>
